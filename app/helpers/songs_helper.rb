@@ -1,7 +1,7 @@
 module SongsHelper
 
     def display_artist(song)
-        if song.artist.blank?
+        if song.artist.empty?
             #artist edit page link_to
             link_to "Add Artist", edit_artist_path(song.artist)
         else
