@@ -14,10 +14,10 @@ class Song < ActiveRecord::Base
     if self.artist
       self.artist.name = name
     else
-      artist = Artist.find_or_create_by(name: name)
-      artist.songs << self
+      self.artist = Artist.find_or_create_by(name: name)
+      
     end
 
   end
-  
+
 end
